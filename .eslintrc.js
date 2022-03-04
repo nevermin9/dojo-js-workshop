@@ -16,5 +16,10 @@ module.exports = {
         "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
         "quotes": [ "error", "double" ],
         "indent": [ "error", 4 ],
+        "vue/multi-word-component-names": ["error", {
+            "ignores": [
+                "index"
+            ]
+        }]
     }
 }
