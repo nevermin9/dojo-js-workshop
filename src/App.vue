@@ -1,69 +1,54 @@
 <template>
     <n-config-provider :theme="darkTheme">
-        <!-- <n-layout style="height: 100vh"> -->
-        <!-- <n-layout position="absolute" style="height: 100vh" has-sider> -->
         <n-layout style="height: 100vh" has-sider>
             <n-layout-sider
-                content-style="padding: 24px;"
                 bordered
                 show-trigger
                 collapse-mode="width"
                 :collapsed-width="64"
                 :width="240"
                 :native-scrollbar="false"
-                :inverted="inverted"
             >
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2>Handian Bridge</n-h2>
-                <n-h2 class="test" v-for="i in 200" :key="i">Pingshan Road</n-h2>
+                <n-menu
+                    :collapsed-width="64"
+                    :collapsed-icon-size="22"
+                    :options="menuOptions"
+                />
             </n-layout-sider>
 
             <n-layout>
-                <n-layout-header position="absolute" style="top: 0; height: 84px; padding: 24px; z-index: 999" bordered>
-                    Yiheyuan Road
+                <n-layout-header
+                    position="absolute"
+                    style="top: 0; height: 84px; padding: 24px; z-index: 999"
+                    bordered
+                    v-if="$route.name !== routesNames.main"
+                >
+                    {{
+                        $route.name
+                    }}
                 </n-layout-header>
 
-                <n-layout content-style="padding: 24px;" :native-scrollbar="false">
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2>Pingshan Road</n-h2>
-                    <n-h2 class="test" v-for="i in 200" :key="i">Pingshan Road</n-h2>
+                <n-layout content-style="padding: 84px 24px 24px;" :native-scrollbar="false">
+                    <section>
+                        <router-view />
+                    </section>
                 </n-layout>
             </n-layout>
 
             <resizable-block class="main__resizable-block">
-
+                <iframe
+                    class="iframe-code"
+                    src="https://codesandbox.io/embed/cranky-danilo-p6swc1?fontsize=14&hidenavigation=1&theme=dark&codemirror=1&expanddevtools=1"
+                    style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                    title="cranky-danilo-p6swc1"
+                    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+                ></iframe>
             </resizable-block>
 
             <!-- <div>
                 slkdjfaslkdjlksdjfklsfj
             </div> -->
-            <!-- <iframe
-                class="iframe-code"
-                src="https://codesandbox.io/embed/cranky-danilo-p6swc1?fontsize=14&hidenavigation=1&theme=dark"
-                style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-                title="cranky-danilo-p6swc1"
-                allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-            ></iframe> -->
         </n-layout>
     </n-config-provider>
 </template>
@@ -75,9 +60,34 @@ import {
     NLayout,
     NLayoutHeader,
     NLayoutSider,
+    NMenu,
     darkTheme,
 } from "naive-ui"
+import { BookOutline } from "@vicons/ionicons5";
+import renderIcon from "@/components/functional/render-icon"
+import renderMenuNavItem from "@/components/functional/render-menu-nav-item"
+import routesNames from "@/router/routesNames"
 import ResizableBlock from "@/components/ResizableBlock/index.vue"
+
+const menuIcon = renderIcon(BookOutline);
+
+const menuOptions = [
+    {
+        label: renderMenuNavItem({ name: routesNames.main }, "Main"),
+        key: routesNames.main,
+        icon: menuIcon, 
+    },
+    {
+        label: renderMenuNavItem({ name: routesNames.intoProgramming }, "Into Programming"),
+        key: routesNames.intoProgramming,
+        icon: menuIcon,
+    },
+    {
+        label: renderMenuNavItem({ name: routesNames.intoJavaScript }, "Into JavaScript"),
+        key: routesNames.intoJavaScript,
+        icon: menuIcon,
+    }
+]
 
 export default defineComponent({
     components: {
@@ -86,11 +96,14 @@ export default defineComponent({
         NLayoutHeader,
         NLayoutSider,
         ResizableBlock,
+        NMenu,
     },
 
     setup() {
         return {
             darkTheme,
+            menuOptions,
+            routesNames,
         }
     },
 })
@@ -105,6 +118,9 @@ export default defineComponent({
 //     width: 100%;
 //     z-index: 999;
 // }
+.test {
+    font-size: 32px;
+}
 
 .main {
     &__resizable-block {
