@@ -8,14 +8,12 @@
     </p>
 
     <p>
-        In JavaScript statements look as follows:
+        In JavaScript statements might look as follows:
     </p>
 
     <code-snippet
         code="const foo = 42 + bar;"
     />
-
-
 </template>
 
 <script lang="ts">
@@ -26,8 +24,5 @@ export default defineComponent({
     components: {
         CodeSnippet,
     }
-    // setup() {
-        
-    // },
 })
 </script>

@@ -1,7 +1,7 @@
 const routesNames = {
-    main: "main",
-    intoProgramming: "into-programming",
-    intoJavaScript: "into-javascript",
+    main: "Main",
+    intoJavaScript: "Into Javascript",
+    typesValues: "Types & Values",
 }
 
 export default routesNames;

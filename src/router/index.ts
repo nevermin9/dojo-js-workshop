@@ -5,18 +5,18 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
         name: routesNames.main,
-        component: () => import(/* webpackCunkName: "main" */ "@/views/Main/index.vue"),
-    },
-    {
-        path: "/into-programming",
-        name: routesNames.intoProgramming,
-        component: () => import(/* webpackCunkName: "intoProgramming" */ "@/views/IntoProgramming/index.vue"),
+        component: () => import(/* webpackChunkName: "main" */ "@/views/Main/index.vue"),
     },
     {
         path: "/into-javascript",
         name: routesNames.intoJavaScript,
-        component: () => import(/* webpackCunkName: "intoJavaScript" */ "@/views/IntoJavaScript/index.vue"),
+        component: () => import(/* webpackChunkName: "intoJavaScript" */ "@/views/IntoJavaScript/index.vue"),
     },
+    {
+        path: "/types",
+        name: routesNames.typesValues,
+        component: () => import(/* webpackChunkName: "types" */ "@/views/TypesValues/index.vue"),
+    }
 ]
 
 const router = createRouter({

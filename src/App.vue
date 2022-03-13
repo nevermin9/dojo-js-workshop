@@ -73,18 +73,18 @@ const menuIcon = renderIcon(BookOutline);
 
 const menuOptions = [
     {
-        label: renderMenuNavItem({ name: routesNames.main }, "Main"),
+        label: renderMenuNavItem({ name: routesNames.main }, routesNames.main),
         key: routesNames.main,
         icon: menuIcon, 
     },
     {
-        label: renderMenuNavItem({ name: routesNames.intoProgramming }, "Into Programming"),
-        key: routesNames.intoProgramming,
+        label: renderMenuNavItem({ name: routesNames.intoJavaScript }, routesNames.intoJavaScript),
+        key: routesNames.intoJavaScript,
         icon: menuIcon,
     },
     {
-        label: renderMenuNavItem({ name: routesNames.intoJavaScript }, "Into JavaScript"),
-        key: routesNames.intoJavaScript,
+        label: renderMenuNavItem({ name: routesNames.typesValues }, routesNames.typesValues),
+        key: routesNames.typesValues,
         icon: menuIcon,
     }
 ]
