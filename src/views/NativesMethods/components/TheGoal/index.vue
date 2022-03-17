@@ -9,7 +9,7 @@
     </p>
 
     <p>
-        We will cover <code>prototype</code> later, but for better undestanding now, we can define <i>prototype</i>,
+        We will cover <code>prototype</code> later, but for better understanding now, we can define <i>prototype</i>,
         as a link to the <code>object</code> that have properties and methods. All <code>objects</code> created via constructor
         of the prototype, has access to its properties and methods.
         It is the implementation of <i>inheritance</i> mechanism in JavaScript.
@@ -123,7 +123,7 @@ const num = 42;
 // we pass num variable as argument
 Number.isNaN(num);
 
-// Object.keys returns array of propery keys of the given object
+// Object.keys returns array of property keys of the given object
 Object.keys(obj) // [ 'name', 'country' ]
         "
     />

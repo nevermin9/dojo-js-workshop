@@ -16,7 +16,37 @@ const routes: Array<RouteRecordRaw> = [
         path: "/types",
         name: routesNames.typesValues,
         component: () => import(/* webpackChunkName: "types" */ "@/views/TypesValues/index.vue"),
-    }
+    },
+    {
+        path: "/natives-methods",
+        name: routesNames.nativesMethods,
+        component: () => import(/* webpackChunkName: "" */ "@/views/NativesMethods/index.vue"),
+    },
+    {
+        path: "/scope-closures",
+        name: routesNames.scopeClosures,
+        component: () => import(/* webpackChunkName: "" */ "@/views/ScopeClosures/index.vue"),
+    },
+    {
+        path: "/coercion",
+        name: routesNames.coercion,
+        component: () => import(/* webpackChunkName: "" */ "@/views/Coercion/index.vue"),
+    },
+    {
+        path: "/grammar",
+        name: routesNames.grammar,
+        component: () => import(/* webpackChunkName: "" */ "@/views/Grammar/index.vue"),
+    },
+    {
+        path: "/prototyping",
+        name: routesNames.prototyping,
+        component: () => import(/* webpackChunkName: "" */ "@/views/Prototyping/index.vue"),
+    },
+    {
+        path: "/environments",
+        name: routesNames.environments,
+        component: () => import(/* webpackChunkName: "" */ "@/views/Environments/index.vue"),
+    },
 ]
 
 const router = createRouter({

@@ -116,7 +116,7 @@ const sum = 3 + b;
     <p>
         To lean about <i>Call Stack</i> and <i>Event Loop</i>, I recommend watching
         <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ&ab_channel=JSConf">this video</a> and practice alongside,
-        because this topic extremely important to undestand.
+        because this topic extremely important to understand.
     </p>
 </template>
 

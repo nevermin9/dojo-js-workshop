@@ -22,7 +22,7 @@ console.log(str.toUpperCase()) // prints 'STRING'
     />
 
     <p>
-        But primitives is not objects, thay cannot hold properies and methods as <code>object</code>
+        But primitives is not objects, they cannot hold properties and methods as <code>object</code>
     </p>
 
     <p>
@@ -77,7 +77,7 @@ person.makeMagic() // prints 'Accio'
     />
 
     <p>
-        But <code>objects</code> by their nature are hevier than primitives and requrire more resources.
+        But <code>objects</code> by their nature are havier than primitives and requrire more resources.
     </p>
 
     <p>
@@ -196,7 +196,7 @@ typeof zero.valueOf() // 'number'
     />
 
     <p>
-        Only <code>undefine</code> and <code>null</code> don't have corresponding natives,
+        Only <code>undefined</code> and <code>null</code> don't have corresponding natives,
         hence they don't have any methods to operate on them.
     </p>
 </template>

@@ -64,30 +64,11 @@ import {
     darkTheme,
 } from "naive-ui"
 import { BookOutline } from "@vicons/ionicons5";
-import renderIcon from "@/components/functional/render-icon"
-import renderMenuNavItem from "@/components/functional/render-menu-nav-item"
+import MenuItem from "@/utils/MenuItem";
 import routesNames from "@/router/routesNames"
 import ResizableBlock from "@/components/ResizableBlock/index.vue"
 
-const menuIcon = renderIcon(BookOutline);
-
-const menuOptions = [
-    {
-        label: renderMenuNavItem({ name: routesNames.main }, routesNames.main),
-        key: routesNames.main,
-        icon: menuIcon, 
-    },
-    {
-        label: renderMenuNavItem({ name: routesNames.intoJavaScript }, routesNames.intoJavaScript),
-        key: routesNames.intoJavaScript,
-        icon: menuIcon,
-    },
-    {
-        label: renderMenuNavItem({ name: routesNames.typesValues }, routesNames.typesValues),
-        key: routesNames.typesValues,
-        icon: menuIcon,
-    }
-]
+const menuOptions = MenuItem.createMenuItems(routesNames, BookOutline)
 
 export default defineComponent({
     components: {
