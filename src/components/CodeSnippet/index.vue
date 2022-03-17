@@ -1,5 +1,17 @@
 <template>
-    <highlightjs 
+    <details v-if="summary">
+        <summary>
+            {{ summary }}
+        </summary>
+
+        <highlightjs
+            language="javascript"
+            :code="code"
+        />
+    </details>
+
+    <highlightjs
+        v-else
         language="javascript"
         :code="code"
     />
@@ -13,7 +25,11 @@ export default defineComponent({
         code: {
             type: String,
             required: true,
-        }
+        },
+        summary: {
+            type: String,
+            default: "",
+        },
     }
 })
 </script>

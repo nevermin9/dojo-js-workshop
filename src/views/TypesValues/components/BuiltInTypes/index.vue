@@ -66,6 +66,7 @@
     </p>
 
     <code-snippet
+        summary="Task #1 solution"
         code="
 typeof undefined     === 'undefined'; // true
 typeof null          === 'object';    // true

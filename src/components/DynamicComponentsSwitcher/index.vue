@@ -3,6 +3,7 @@
         <aside class="dynamic-component-switcher__aside">
             <div class="dynamic-component-switcher__btn-wrapper">
                 <n-button
+                    v-if="current > 0"
                     class="dynamic-component-switcher__btn"
                     @click="goPrev"
                 >
@@ -10,6 +11,7 @@
                 </n-button>
 
                 <n-button
+                    v-if="current < components.length - 1"
                     class="dynamic-component-switcher__btn"
                     @click="goNext"
                 >

@@ -9,7 +9,7 @@
         ternary orperator
     </div>
     <div>
-        spread
+        spread and destructing assignment
     </div>
     <div>
         try catch finally
@@ -19,5 +19,8 @@
     </div>
     <div>
         modules
+    </div>
+    <div>
+        for of
     </div>
 </template>
