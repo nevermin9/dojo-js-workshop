@@ -12,23 +12,25 @@
                 <n-menu
                     :collapsed-width="64"
                     :collapsed-icon-size="22"
-                    :options="menuOptions"
+                    :options="menuItems"
                 />
             </n-layout-sider>
 
             <n-layout>
                 <n-layout-header
                     position="absolute"
-                    style="top: 0; height: 84px; padding: 24px; z-index: 999"
+                    style="top: 0; height: 84px; padding: 0 24px; z-index: 999"
                     bordered
                     v-if="$route.name !== routesNames.main"
                 >
-                    {{
-                        $route.name
-                    }}
+                    <h1 class="main__layout-header-text">
+                        {{
+                            $route.name
+                        }}
+                    </h1>
                 </n-layout-header>
 
-                <n-layout content-style="padding: 84px 24px 24px;" :native-scrollbar="false">
+                <n-layout content-style="padding: 94px 24px 84px;" :native-scrollbar="false">
                     <section>
                         <router-view />
                     </section>
@@ -45,10 +47,6 @@
                     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
                 ></iframe>
             </resizable-block>
-
-            <!-- <div>
-                slkdjfaslkdjlksdjfklsfj
-            </div> -->
         </n-layout>
     </n-config-provider>
 </template>
@@ -68,7 +66,7 @@ import MenuItem from "@/utils/MenuItem";
 import routesNames from "@/router/routesNames"
 import ResizableBlock from "@/components/ResizableBlock/index.vue"
 
-const menuOptions = MenuItem.createMenuItems(routesNames, BookOutline)
+const menuItems = MenuItem.createMenuItems(routesNames, BookOutline)
 
 export default defineComponent({
     components: {
@@ -83,7 +81,7 @@ export default defineComponent({
     setup() {
         return {
             darkTheme,
-            menuOptions,
+            menuItems,
             routesNames,
         }
     },
@@ -93,17 +91,13 @@ export default defineComponent({
 
 <style lang="scss">
 @import "~@/styles/common";
-// .iframe-code {
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     z-index: 999;
-// }
-.test {
-    font-size: 32px;
-}
 
 .main {
+    &__layout-header-text {
+        font-family: PressStart2P;
+
+    }
+
     &__resizable-block {
         position: absolute;
         bottom: 0;

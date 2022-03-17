@@ -86,16 +86,17 @@ const result2 = String(obj) // '4'
         Other mathematical operators: <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> are
         defined only for <code>number</code>s.
         This means, that values with these operators go through next steps:
-        <ul>
-            <li>
-                Executing the <code>ToPrimitive</code> abstract operation: calling <code>valueOf()</code> to get primitive value,
-                if there is no such a value, calling <code>toString()</code> to get a stringified value.
-            </li>
-            <li>
-                Executing the <code>ToNumber</code> abstract operation, that works like <code>Number()</code> function.
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            Executing the <code>ToPrimitive</code> abstract operation: calling <code>valueOf()</code> to get primitive value,
+            if there is no such a value, calling <code>toString()</code> to get a stringified value.
+        </li>
+        <li>
+            Executing the <code>ToNumber</code> abstract operation, that works like <code>Number()</code> function.
+        </li>
+    </ul>
 
     <code-snippet
         code="
@@ -136,29 +137,32 @@ obj - arr2; // ???
 
     <p>
         These expressions require/force (implicitly) a <code>boolean</code> coercion:
-        <ol>
-            <li>
-                The test expression in an <code>if (...) {...} </code> statement
-            </li>
+    </p>
 
-            <li>
-                The test expression (second clause) in <code>for (...; ...; ...;)</code> header
-            </li>
+    <ol>
+        <li>
+            The test expression in an <code>if (...) {...} </code> statement
+        </li>
 
-            <li>
-                The test expression in <code>while (...)</code> and <code>do {} while (...) </code> loops
-            </li>
+        <li>
+            The test expression (second clause) in <code>for (...; ...; ...;)</code> header
+        </li>
 
-            <li>
-                The test expression (first clause) in <code>... ? ... : ....</code> ternary expression
-            </li>
+        <li>
+            The test expression in <code>while (...)</code> and <code>do {} while (...) </code> loops
+        </li>
 
-            <li>
-                The left-hand operand (which serves as a test expression) to the <code>||</code> ("logical or")
-                and <code>&#38;&#38;</code> ("logical and") operators
-            </li>
-        </ol>
+        <li>
+            The test expression (first clause) in <code>... ? ... : ....</code> ternary expression
+        </li>
 
+        <li>
+            The left-hand operand (which serves as a test expression) to the <code>||</code> ("logical or")
+            and <code>&#38;&#38;</code> ("logical and") operators
+        </li>
+    </ol>
+
+    <p>
         Any value used in these contexts that is not already a <code>boolean</code> will be implicitly coerced to a boolean using the rules of the <code>ToBoolean</code> abstract operation covered earlier.
     </p>
 
@@ -320,17 +324,17 @@ theMainCharacter; // ???
 
     <p>
         Some minor exceptions to normal expectation to be aware of:
-
-        <ul>
-            <li>
-                <code>NaN</code> is never equal to itself
-            </li>
-
-            <li>
-                <code>+0</code> and <code>-0</code> are equal to each other
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            <code>NaN</code> is never equal to itself
+        </li>
+
+        <li>
+            <code>+0</code> and <code>-0</code> are equal to each other
+        </li>
+    </ul>
 
     <p>
         If you use <code>==</code> loose equality or <code>===</code> strict equality with <code>object</code>s
@@ -502,19 +506,21 @@ false == {};			// ??
     <p>
         The most important advice I can give you: prefer to use <code>===</code> strict equals.
         But, if you want to use <code>==</code> loose equals, you should follow some rules:
+    </p>
 
-        <ol>
-            <li>
-                If either side of the comparison can have <code>true</code> or <code>false</code> values,
-                don't ever, EVER use <code>==</code>.
-            </li>
+    <ol>
+        <li>
+            If either side of the comparison can have <code>true</code> or <code>false</code> values,
+            don't ever, EVER use <code>==</code>.
+        </li>
 
-            <li>
-                If either side of the comparison can have <code>[]</code>, <code>""</code>,
-                or <code>0</code> values, seriously consider not using ==.
-            </li>
-        </ol>
+        <li>
+            If either side of the comparison can have <code>[]</code>, <code>""</code>,
+            or <code>0</code> values, seriously consider not using ==.
+        </li>
+    </ol>
 
+    <p>
         The question of <code>==</code> vs. <code>===</code> is really appropriately framed as:
         should you allow coercion for a comparison or not?
     </p>

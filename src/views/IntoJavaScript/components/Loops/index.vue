@@ -112,7 +112,6 @@ for (let i = 0; i < 3; i++) {
         </li>
     </ul>
 
-
     <p>
         Sometimes you need to "break" your loop.
         It can be done via <code>break</code> statement
@@ -146,7 +145,6 @@ for (let i = 0; i < 10; i++) {
     console.log(i) // 1, 3, 5, 7, 9
 }
         "
-
     />
 </template>
 

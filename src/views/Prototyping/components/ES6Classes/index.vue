@@ -96,18 +96,18 @@ answer; // 'function'
 
     <p>
         What <code>class User {...}</code> really does is:
-
-        <ol>
-            <li>
-                Creates a function named <code>User</code>, that becomes the result of the class declaration.
-                The function code is taken from the <code>constructor</code> method
-                (assumed empty if we don't write such method).
-            </li>
-            <li>
-                Stores class methods, such as <code>printName</code>, in User.prototype.
-            </li>
-        </ol>
     </p>
+
+    <ol>
+        <li>
+            Creates a function named <code>User</code>, that becomes the result of the class declaration.
+            The function code is taken from the <code>constructor</code> method
+            (assumed empty if we don't write such method).
+        </li>
+        <li>
+            Stores class methods, such as <code>printName</code>, in User.prototype.
+        </li>
+    </ol>
 
     <h3>
         What we can do with <code>class</code>es?

@@ -37,7 +37,14 @@
         </div>
 
         <transition name="fade">
-            <div v-show="!isOpen">closed</div>
+            <div
+                v-show="!isOpen"
+                class="resizable-block__closed-text-wrap"
+            >
+                <span class="resizable-block__closed-text">
+                    Console
+                </span>
+            </div>
         </transition>
 
         <transition name="fade">
@@ -92,7 +99,7 @@ export default defineComponent({
     $root: &;
 
     position: relative;
-    height: 50px;
+    height: 60px;
     border-top: 1px solid rgb(255 255 255 / 9%);
     background-color: rgb(24 24 28);
     transition: height .3s;
@@ -129,6 +136,19 @@ export default defineComponent({
         &#{ $root }__btn-ico-wrapper_opened {
             transform: rotate(90deg);
         }
+    }
+    
+    &__closed-text-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__closed-text {
+        font-size: 16px;
+        @include code;
     }
 }
 </style>

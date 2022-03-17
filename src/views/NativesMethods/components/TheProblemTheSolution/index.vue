@@ -31,33 +31,33 @@ console.log(str.toUpperCase()) // prints 'STRING'
 
     <p>
         A primitive:
-
-        <ul>
-            <li>
-                Is a value of a primitive type.
-            </li>
-
-            <li>
-                There are 7 primitive types: <code>string</code>, <code>number</code>,
-                <code>bigint</code>, <code>boolean</code>, <code>symbol</code>, <code>null</code> and <code>undefined</code>.
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            Is a value of a primitive type.
+        </li>
+
+        <li>
+            There are 7 primitive types: <code>string</code>, <code>number</code>,
+            <code>bigint</code>, <code>boolean</code>, <code>symbol</code>, <code>null</code> and <code>undefined</code>.
+        </li>
+    </ul>
 
     <p>
         A non-primitive:
-
-        <ul>
-            <li>
-                Is capable of storing multiple values as properties.
-            </li>
-
-            <li>
-                Can be created with <code>{}</code>, for instance: <code>{name: "John", age: 30}</code>.
-                There are other kinds of objects in JavaScript: functions, for example, are objects.
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            Is capable of storing multiple values as properties.
+        </li>
+
+        <li>
+            Can be created with <code>{}</code>, for instance: <code>{name: "John", age: 30}</code>.
+            There are other kinds of objects in JavaScript: functions, for example, are objects.
+        </li>
+    </ul>
 
     <p>
         One of the best things about <code>objects</code> is that we can store a <code>function</code> as one of its properties.
@@ -82,35 +82,36 @@ person.makeMagic() // prints 'Accio'
 
     <p>
         So, here's the paradox faced by the creator of JavaScript:
-
-        <ul>
-            <li>
-                There are many things one would want to do with a primitive like a string or a number.
-                It would be great to access them using methods.
-            </li>
-
-            <li>
-                Primitives must be as fast and lightweight as possible.
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            There are many things one would want to do with a primitive like a string or a number.
+            It would be great to access them using methods.
+        </li>
+
+        <li>
+            Primitives must be as fast and lightweight as possible.
+        </li>
+    </ul>
 
     <p>
         Solution is:
-        <ul>
-            <li>
-                Primitives are still primitive. A single value, as desired.
-            </li>
-
-            <li>
-                The language allows access to methods and properties of strings, numbers, booleans and symbols.
-            </li>
-
-            <li>
-                In order for that to work, a special "object wrapper" that provides the extra functionality is created, and then is destroyed.
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            Primitives are still primitive. A single value, as desired.
+        </li>
+
+        <li>
+            The language allows access to methods and properties of strings, numbers, booleans and symbols.
+        </li>
+
+        <li>
+            In order for that to work, a special "object wrapper" that provides the extra functionality is created, and then is destroyed.
+        </li>
+    </ul>
 
     <p>
         The natives come to the rescue. The natives serve as wrappers of the primitives and give us access
@@ -136,23 +137,24 @@ console.log(lowerRandom); // prints 'random'
 
     <p>
         How does it work?
-        <ul>
-            <li>
-                The <code>floatNum</code> and <code>random</code> are primitives.
-                In the moment of accessing their properies, special objects
-                (via natives <code>Number</code> and <code>String</code> respectively) that knows their values and has
-                appropriate methods - <code>.toFixed</code> and <code>.toLowerCase</code>
-            </li>
-
-            <li>
-                We call these method and they return new values
-            </li>
-
-            <li>
-                The special objects is destroyed, leave the primitives alone.
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            The <code>floatNum</code> and <code>random</code> are primitives.
+            In the moment of accessing their properies, special objects
+            (via natives <code>Number</code> and <code>String</code> respectively) that knows their values and has
+            appropriate methods - <code>.toFixed</code> and <code>.toLowerCase</code>
+        </li>
+
+        <li>
+            We call these method and they return new values
+        </li>
+
+        <li>
+            The special objects is destroyed, leave the primitives alone.
+        </li>
+    </ul>
 
     <p>
         JavaScript does it under the hood, but we can do it on our own:

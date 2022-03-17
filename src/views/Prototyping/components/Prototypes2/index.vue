@@ -153,7 +153,7 @@ nokia.hasBattery; // true
     </p>
 
     <div class="image-wrapper">
-        <img src="@/assets/images/prototype-scheme.png" />
+        <img src="@/assets/images/prototype-scheme.jpg" />
     </div>
 
     <p>

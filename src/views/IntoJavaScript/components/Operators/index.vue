@@ -38,7 +38,7 @@ let b = a + 1;
                 <code>+</code>
                 for addition;
                 <code>-</code>
-                for substruction;
+                for subtraction;
                 <code>*</code>
                 for multiplication;
                 <code>/</code>

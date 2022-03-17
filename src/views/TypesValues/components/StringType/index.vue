@@ -39,13 +39,13 @@ let phrase = `can embed another ${str}`;
 
     <p>
         In JavaScript, there are 3 types of quotes.
-
-        <ul>
-            <li>Double quotes <code>"Hello"</code> </li>
-            <li>Single quotes <code>'Hello'</code> </li>
-            <li>Backticks <code>`Hello`</code> </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>Double quotes <code>"Hello"</code> </li>
+        <li>Single quotes <code>'Hello'</code> </li>
+        <li>Backticks <code>`Hello`</code> </li>
+    </ul>
 
     <p>
         Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.

@@ -67,23 +67,24 @@ foo(globalVariable)
 
     <p>
         In the example above, there are three lexical scopes.
-        <ul>
-            <li>
-                <strong>First scope</strong> encompasses the global scope, and has two identifiers in it:
-                <code>foo</code> and <code>globalVariable</code>
-            </li>
-
-            <li>
-                <strong>Second scope</strong> encompasses the <code>foo</code>'s scope and has three identifiers in it:
-                <code>a</code> (an argument of the <code>foo</code>), <code>b</code>, <code>bar</code>
-            </li>
-
-            <li>
-                <strong>Third scope</strong> encompasses the <code>bar</code>'s scope and has two indentifiers in it:
-                <code>x</code> and <code>c</code>
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            <strong>First scope</strong> encompasses the global scope, and has two identifiers in it:
+            <code>foo</code> and <code>globalVariable</code>
+        </li>
+
+        <li>
+            <strong>Second scope</strong> encompasses the <code>foo</code>'s scope and has three identifiers in it:
+            <code>a</code> (an argument of the <code>foo</code>), <code>b</code>, <code>bar</code>
+        </li>
+
+        <li>
+            <strong>Third scope</strong> encompasses the <code>bar</code>'s scope and has two indentifiers in it:
+            <code>x</code> and <code>c</code>
+        </li>
+    </ul>
 
     <p>
         It may be helpful to think about these scopes as bubbles inside of each other.

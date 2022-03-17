@@ -243,22 +243,23 @@ const arr = new Array();
 
     <p>
         The main characteristics of the <code>array</code>:
-        <ul>
-            <li>
-                JS arrys are resizable and can contain a mix a different data types
-            </li>
-
-            <li>
-                The elements of the array are accessed by the integer as indexes.
-            </li>
-
-            <li>
-                JavaScript arrays are zero-indexed:
-                the first element of an array is at index <code>0</code>, the second is at index <code>1</code>, and so on.
-                The last element is at value of <code>array.length - 1</code>
-            </li>
-        </ul>
     </p>
+
+    <ul>
+        <li>
+            JS arrays are resizable and can contain a mix a different data types
+        </li>
+
+        <li>
+            The elements of the array are accessed by the integer as indexes.
+        </li>
+
+        <li>
+            JavaScript arrays are zero-indexed:
+            the first element of an array is at index <code>0</code>, the second is at index <code>1</code>, and so on.
+            The last element is at value of <code>array.length - 1</code>
+        </li>
+    </ul>
 
     <code-snippet
         code="
@@ -271,7 +272,7 @@ function addTwo(x) {
 const arr = [true, 12, 'hello', { name: 'Strichka' }, [1, 2, 3]];
 
 // get its length
-console.log(arr.lenght); // prints 5;
+console.log(arr.length); // prints 5;
 
 // get SECOND element of the array
 console.log(arr[1]) // print 12;
@@ -281,7 +282,7 @@ console.log(arr[1]) // print 12;
 arr[arr.length - 1] = addTwo;
 
 // arr.length was changed
-console.log(arr.lenght); // prints 6;
+console.log(arr.length); // prints 6;
         "
     />
     
@@ -327,7 +328,7 @@ arr[0] = 'first el';
 // don't define arr[1] here
 arr[2] = 'third el'
 
-console.log(arr.lenght) // prints 3
+console.log(arr.length) // prints 3
 // but
 console.log(arr[1]) // ?
         "
@@ -380,7 +381,7 @@ typeof getNothing() // ?
     <code-snippet
         code="
 function threeArg(one, two, three) {}
-console.log(threeArg.lenght) // prints 3
+console.log(threeArg.length) // prints 3
         "
     />
 
@@ -395,14 +396,14 @@ console.log(threeArg.lenght) // prints 3
 function reallyExpensiveCalculation(firstArg, secondArg) {
     // check if cache already contains calculation with such arguments
     // if contains, return from cache
-    if (reallyExpensivalculation.cache[`${firstArg}${secondArg}`]) {
+    if (reallyExpensiveCalculation.cache[`${firstArg}${secondArg}`]) {
         // statement 'return' make function complete its execution
-        return reallyExpensivalculation.cache[`${firstArg}${secondArg}`];
+        return reallyExpensiveCalculation.cache[`${firstArg}${secondArg}`];
         // i.e further code will not executed
     }
 
-    const result = doCaclulations(firstArg, secondArg);
-    reallyExpensivalculation.cache[`${firstArg}${secondArg}`] = result;
+    const result = doCalculations(firstArg, secondArg);
+    reallyExpensiveCalculation.cache[`${firstArg}${secondArg}`] = result;
 
     return result;
 }
@@ -411,35 +412,37 @@ function reallyExpensiveCalculation(firstArg, secondArg) {
 
     <p>
         There are three ways to define function:
-        <ol>
-            <li>
-                <i>
-                    Function declaration
-                </i>
-    <code-snippet
-        code="
+    </p>
+
+    <ol>
+        <li>
+            <i>
+                Function declaration
+            </i>
+            <code-snippet
+                code="
 function doSomething() {
     // function's body
 }
-        "
-    />
-            </li>
+                    "
+                />
+        </li>
 
-            <li>
-                <i>
-                    Function expression
-                </i>
+        <li>
+            <i>
+                Function expression
+            </i>
 
-    <code-snippet
-        code="
-// anonymus function expression
+            <code-snippet
+                code="
+// anonymous function expression
 function() {
     // body
 }
 
-// anonymus functions often used as argument for other methods
+// anonymous functions often used as argument for other methods
 setTimeout(function() {
-    console.log('awasome')
+    console.log('awesome')
 }, 1000) // will be executed in 1000ms
 
 // assign function expression to the variable
@@ -455,16 +458,16 @@ const bar = function baz() {
 
 bar();
         "
-    />
+            />
                 The main difference between a function expression and a function declaration is the function name,
                 which can be omitted in function expressions to create anonymous functions.
-            </li>
+        </li>
 
-            <li>
-                Arrow functions
+        <li>
+            Arrow functions
 
-    <code-snippet
-        code="
+            <code-snippet
+                code="
 const print = (str) => {
     console.log(str)
 }
@@ -472,24 +475,23 @@ const print = (str) => {
 const oneLine = (smth) => smth; // returns 'smth'
 const returnObjectOneLine = (propertyKey) => ({ [propertyKey]: 'value' });
         "
-    />
+            />
 
-                This function has some limitations. For example, arrow function
-                does not have its own bindings to <code>this</code>.
-                We will cover <code>this</code> keyword later.
-                This type of functions often used to create function 'on-the-fly' e.g. as arguments of the method
-    <code-snippet
-        code="
+            This function has some limitations. For example, arrow function
+            does not have its own bindings to <code>this</code>.
+            We will cover <code>this</code> keyword later.
+            This type of functions often used to create function 'on-the-fly' e.g. as arguments of the method
+            <code-snippet
+                code="
 const arr = [1, 2, 3];
-// Array.protorype.map is a method of arrays that used to modify elements of the existing array
+// Array.prototype.map is a method of arrays that used to modify elements of the existing array
 // In this case it just adds 2 for every element of arr
 arr.map((el) => el + 2);
 arr; // [3, 4, 5];
         "
     />
-            </li>
-        </ol>
-    </p>
+        </li>
+    </ol>
 
     <p>
         For every function we can define default values for the arguments via <code>=</code>

@@ -4,18 +4,18 @@
             <div class="dynamic-component-switcher__btn-wrapper">
                 <n-button
                     v-if="current > 0"
-                    class="dynamic-component-switcher__btn"
+                    class="dynamic-component-switcher__btn dynamic-component-switcher__btn--prev"
                     @click="goPrev"
                 >
-                    prev
+                    Prev
                 </n-button>
 
                 <n-button
                     v-if="current < components.length - 1"
-                    class="dynamic-component-switcher__btn"
+                    class="dynamic-component-switcher__btn dynamic-component-switcher__btn--next"
                     @click="goNext"
                 >
-                    next
+                    Next
                 </n-button>
             </div>
         </aside>
@@ -66,3 +66,29 @@ export default defineComponent({
     },
 })
 </script>
+
+<style lang="scss">
+.dynamic-component-switcher {
+    $root: &;
+
+    &__btn-wrapper {
+        display: flex;
+    }
+
+    &__btn {
+        &#{ $root }__btn--prev {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        &#{ $root }__btn--next {
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+
+    &__aside {
+        margin-bottom: 16px;
+    }
+}
+</style>
