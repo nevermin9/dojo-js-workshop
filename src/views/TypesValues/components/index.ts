@@ -7,6 +7,7 @@ import StringType from "./StringType/index.vue";
 import BooleanType from "./BooleanType/index.vue";
 import SymbolType from "./SymbolType/index.vue";
 import Objects from "./Objects/index.vue";
+import Tasks from "./Tasks/index.vue";
 
 const components = [
     BuiltInTypes,
@@ -18,6 +19,7 @@ const components = [
     BooleanType,
     SymbolType,
     Objects,
+    Tasks,
 ];
 
 export default components;

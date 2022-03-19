@@ -4,7 +4,7 @@
     </h2>
 
     <p>
-        JavaScript had been created for people. It have to look like other languages, thereby made developers from
+        JavaScript had been created for people. It have to look like other languages, thereby make developers from
         other languages feel more comfortable and start working faster.
         Therefore, syntax should look familiar for them. So, creators of JavaScript decided to make simulation of OOP
         in more understandable way.
@@ -35,6 +35,11 @@ User.prototype.printAge = function() {
 
 const jack = new User('Jack', 26);
 const john = new User('John', 32);
+
+// and use it
+jack.printName(); // 'Jack'
+
+// jack.__proto__ points to User.prototype
         "
     />
 
@@ -258,77 +263,40 @@ const user = UserController.createUser('Name', 23, ...other parameters);
     </p>
 
     <p>
+        Sometimes, static properties of a class are used to hold values that never will be changed:
+    </p>
+
+    <code-snippet
+        code="
+class User {
+    static role = 'user';
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    showDataAboutUser() {
+        console.log(`${this.name} is ${age} old, the role is ${User.role}`);
+    }
+}
+        "
+
+    />
+
+    <p>
+        To have access to static properties or methods in the regular methods ("prototype methods"), we have to
+        address them by specifying the <code>class</code> name. Because <code>this</code> in such method point to
+        instance itself.
+    </p>
+
+    <p>
         Usually, static methods are used to implement functions that belong to the class,
         but not to any particular object of it.
         Using static methods doesn't restrict you from using regular types of methods.
         But in real world, it is common to have <i>static class</i> - class that contains only static method and properties -
-        to manipulate objects, like in the example above.
+        to manipulate objects.
     </p>
-
-    <h3>
-        Task
-    </h3>
-
-    <p>
-        Create the class <code>Book</code>. It should contain a name of the book, the author, the year of book printing.
-        Also, every book has to have <code>getter</code>, that return string with the complete information about the book.
-        Create static class <code>Library</code>. It should have a book list, the ability to create books, adding them to the list.
-        Before adding, it has to check if list already contains book with such the name, the author and
-        the year of book printing. If so, <code>Library</code> won't add book to the list,
-        just prints to the console <code>The list already contains ${the complete information about the book}</code>.
-        If there is no such the book, <code>Library</code> will add it to the list.
-    </p>
-
-    <code-snippet
-        summary="Solution"
-        code="
-class Book {
-    constructor(
-        name,
-        author,
-        year,
-    ) {
-        this.name = name;
-        this.author = author;
-        this.year = year;
-    }
-
-    get bookInfo() {
-        return `${this.name}, ${this.author}, ${this.year}`;
-    }
-}
-
-class Library {
-    static bookList = [];
-
-    static createBook(name, author, year) {
-        const book = new Book(name, author, year);
-        this.addBookToList(book);
-        return book;
-    }
-
-    static addBookToList(newBook) {
-        if (this.isAlreadyExists(newBook)) {
-            console.log(`The list already contains ${newBook.bookInfo}`);
-            return;
-        }
-
-        this.bookList.push(newBook);
-    }
-
-    static isAlreadyExists(newBook) {
-        for (const listBook of this.bookList) {
-            if (listBook.bookInfo === newBook.bookInfo) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-}
-        "
-    />
-
 </template>
 
 <script lang="ts">

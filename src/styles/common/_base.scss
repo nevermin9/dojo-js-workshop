@@ -53,6 +53,17 @@ ul {
     list-style: square;
 }
 
-code {
+code,
+ul > code,
+ol > code {
     @include code;
+}
+
+a {
+    color: $regular-text-color;
+    transition: text-decoration .3s;
+
+    &:hover {
+        text-decoration: none;
+    }
 }

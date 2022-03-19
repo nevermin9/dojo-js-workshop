@@ -1,26 +1,23 @@
 <template>
-    <div>
-        use strict
-    </div>
-    <div>
-        logical operators, ??
-    </div>
-    <div>
-        ternary orperator
-    </div>
-    <div>
-        spread and destructing assignment
-    </div>
-    <div>
-        try catch finally
-    </div>
-    <div>
-        promises
-    </div>
-    <div>
-        modules
-    </div>
-    <div>
-        for of
-    </div>
+    <section>
+        <dynamic-components-switcher :components="components" />
+    </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue"
+import DynamicComponentsSwitcher from "@/components/DynamicComponentsSwitcher/index.vue"
+import components from "./components";
+
+export default defineComponent({
+    components: {
+        DynamicComponentsSwitcher,
+    },
+
+    setup() {
+        return {
+            components,
+        }
+    },
+})
+</script>

@@ -1,18 +1,22 @@
 <template>
-    <details v-if="summary">
+    <details
+        v-if="summary"
+        class="code-snippet"
+    >
         <summary>
             {{ summary }}
         </summary>
 
         <highlightjs
-            language="javascript"
+            :language="language"
             :code="code"
         />
     </details>
 
     <highlightjs
         v-else
-        language="javascript"
+        class="code-snippet"
+        :language="language"
         :code="code"
     />
 </template>
@@ -30,6 +34,16 @@ export default defineComponent({
             type: String,
             default: "",
         },
+        language: {
+            type: String,
+            default: "javascript",
+        }
     }
 })
 </script>
+
+<style lang="scss">
+.code-snippet {
+    margin-bottom: 16px;
+}
+</style>

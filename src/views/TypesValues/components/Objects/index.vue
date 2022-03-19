@@ -492,23 +492,6 @@ arr; // [3, 4, 5];
     />
         </li>
     </ol>
-
-    <p>
-        For every function we can define default values for the arguments via <code>=</code>
-    </p>
-
-    <code-snippet
-        code="
-function withDefault(first, second = 'default') {
-    // body
-}
-
-// default value can be even value from another function
-function withDefaultSecond(first, second = defineDefault()) {
-    // body
-}
-        "
-    />
 </template>
 
 <script lang="ts">

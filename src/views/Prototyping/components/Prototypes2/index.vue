@@ -68,7 +68,7 @@ arr.push('hello');
     />
 
     <p>
-        Non-primitive values behave in similar way. But JavaScript doesn't create temporary wrappers around them.
+        But JavaScript doesn't create temporary wrappers around them.
         Because they are already <code>object</code>s. It means, they already have some properties and methods to work
         with them. But where do they keep these properties and methods?
         The answer is <code>[[Prototype]]</code>.
@@ -114,7 +114,7 @@ const electronicDevice = {
 }
 
 // define function, ie constructor function
-const Phone(name) {
+function Phone(name) {
     // 'this' will point to the newly created object
     this.name = name;
 }
@@ -166,6 +166,9 @@ nokia.hasBattery; // true
 const obj = {};
 const arr = [1, 2, 3];
 
+// real Polymorphism
+// both objects have toString()
+// but every of them implement it in own way
 obj.toString(); // '[object Object]'
 arr.toString(); // 1,2,3
         "

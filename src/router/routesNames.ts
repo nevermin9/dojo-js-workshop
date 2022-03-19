@@ -1,5 +1,5 @@
 const routesNames = {
-    main: "Main",
+    home: "Home",
     intoJavaScript: "Into Javascript",
     typesValues: "Types & Values",
     nativesMethods: "Natives and Methods",
@@ -8,6 +8,7 @@ const routesNames = {
     grammar: "Grammar",
     prototyping: "Prototyping",
     environments: "Environments",
+    furtherLearning: "Farther learning",
 };
 
 export default routesNames;

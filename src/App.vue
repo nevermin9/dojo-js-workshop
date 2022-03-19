@@ -21,7 +21,7 @@
                     position="absolute"
                     style="top: 0; height: 84px; padding: 0 24px; z-index: 999"
                     bordered
-                    v-if="$route.name !== routesNames.main"
+                    v-if="$route.name !== routesNames.home"
                 >
                     <h1 class="main__layout-header-text">
                         {{

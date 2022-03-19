@@ -5,7 +5,7 @@
 
     <p>
         <strong>There is no classic OOP in JavaScript.</strong>
-        There is just an "imitation" of OOP in JavaScript.
+        There is just an "imitation" of OOP.
         And it is quite powerful imitation of OOP. It is so powerful that it is enough to
         build complex systems and interfaces.
         To resolve classic problems of OOP, JavaScript uses <code>[[Prototype]]</code> mechanism.
@@ -162,75 +162,6 @@ bond.introduceMyself(); // Hello, my name is Bond, James Bond.
 
 // using the 'inherited' introduceMyself() method
 mason.introduceMyself(); // Hello, my name is Jack Mason.
-        "
-    />
-
-    <h3>
-        Tasks
-    </h3>
-
-    <p>
-        Create <code>object</code> <code>phoneBook</code>. This <code>object</code> have to hold one property -
-        <code>array</code> of <code>contacts</code> - and one method <code>addContact(contact)</code> that will add
-        contact to the <code>contacts</code> <code>array</code>.
-        Tip: use
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array.prototype.push</a>
-        method for adding elements to the array.
-    </p>
-
-    <p>
-        After it, create two <code>object</code>s - <code>myPhoneBook</code> and <code>friendPhoneBook</code>, both
-        of them have to "inherit" from <code>phoneBook</code>. Add some random contact to the <code>myPhoneBook</code>'s
-        contact list.
-    </p>
-
-
-    <code-snippet
-        summary="Solution for the first part"
-        code="
-const phoneBook = {
-    contacts: [],
-    addContact(contact) {
-        this.contacts.push(contact);
-    }
-}
-
-const myPhoneBook = {
-    __proto__: phoneBook,
-};
-
-const friendPhoneBook = {
-    __proto__: phoneBook,
-};
-        "
-    />
-
-    <p>
-        Check <code>contacts</code> of the <code>friendPhoneBook</code>.
-        Did you notice something strange? Why did it happen? How can you fix it?
-    </p>
-
-    <code-snippet
-        summary="Solution for the second part"
-        code="
-// every phone book should have its own contacts list
-
-const phoneBook = {
-    contacts: [],
-    addContact(contact) {
-        this.contacts.push(contact);
-    }
-}
-
-const myPhoneBook = {
-    contacts: [],
-    __proto__: phoneBook,
-};
-
-const friendPhoneBook = {
-    contacts: [],
-    __proto__: phoneBook,
-};
         "
     />
 </template>
