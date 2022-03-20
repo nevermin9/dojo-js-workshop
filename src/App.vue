@@ -30,11 +30,27 @@
                     </h1>
                 </n-layout-header>
 
-                <n-layout content-style="padding: 94px 24px 84px;" :native-scrollbar="false">
+                <n-layout
+                    ref="layout"
+                    content-style="padding: 94px 24px 84px;"
+                    :native-scrollbar="false"
+                >
                     <section>
                         <router-view />
                     </section>
                 </n-layout>
+
+                <n-button
+                    v-if="$route.name !== routesNames.home"
+                    class="main__btn-arrow-up"
+                    @click="scrollToTop"
+                >
+                    <template #icon>
+                        <n-icon>
+                            <arrow-up />
+                        </n-icon>
+                    </template>
+                </n-button>
             </n-layout>
 
             <resizable-block class="main__resizable-block">
@@ -52,16 +68,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import { defineComponent, ref } from "vue"
 import {
     NConfigProvider,
     NLayout,
     NLayoutHeader,
     NLayoutSider,
     NMenu,
+    NButton,
+    NIcon,
     darkTheme,
 } from "naive-ui"
-import { BookOutline } from "@vicons/ionicons5";
+import { BookOutline, ArrowUp } from "@vicons/ionicons5";
 import MenuItem from "@/utils/MenuItem";
 import routesNames from "@/router/routesNames"
 import ResizableBlock from "@/components/ResizableBlock/index.vue"
@@ -76,13 +94,25 @@ export default defineComponent({
         NLayoutSider,
         ResizableBlock,
         NMenu,
+        NButton,
+        NIcon,
+        ArrowUp,
     },
 
     setup() {
+        const layout = ref(null);
+
+        function scrollToTop() {
+            // @ts-ignore
+            layout.value.$el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
         return {
             darkTheme,
             menuItems,
             routesNames,
+            layout,
+            scrollToTop,
         }
     },
 })
@@ -95,7 +125,18 @@ export default defineComponent({
 .main {
     &__layout-header-text {
         font-family: PressStart2P;
+    }
 
+    &__btn-arrow-up {
+        position: absolute;
+        bottom: 84px;
+        right: 24px;
+        opacity: .6;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     &__resizable-block {

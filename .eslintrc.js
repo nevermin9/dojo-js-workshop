@@ -20,6 +20,7 @@ module.exports = {
             "ignores": [
                 "index"
             ]
-        }]
+        }],
+        "@typescript-eslint/ban-ts-comment": "off"
     }
 }
