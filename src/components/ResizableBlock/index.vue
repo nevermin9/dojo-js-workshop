@@ -81,20 +81,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.fade-enter-active {
-  transition: opacity 1s ease-out;
-  transition-delay: 1s;
-}
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-to {
-  opacity: 1;
-}
-.fade-move {
-  transition: transform 1s;
-}
-
 .resizable-block {
     $root: &;
 

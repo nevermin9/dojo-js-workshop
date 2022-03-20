@@ -27,7 +27,8 @@ h1 {
     margin: 0.67em 0;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-family: $regular-font-family;
 }
 
@@ -39,13 +40,16 @@ h3 {
     font-size: 24px;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 16px;
 }
 
-ul, ol {
+ul,
+ol {
     padding-left: 20px;
 }
 
@@ -61,9 +65,26 @@ ol > code {
 
 a {
     color: $regular-text-color;
-    transition: text-decoration .3s;
+    transition: text-decoration 0.3s;
 
     &:hover {
         text-decoration: none;
     }
+}
+
+.fade-enter-active {
+    transition: opacity 1s ease-out;
+    transition-delay: 1s;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-to {
+    opacity: 1;
+}
+
+.fade-move {
+    transition: transform 1s;
 }
