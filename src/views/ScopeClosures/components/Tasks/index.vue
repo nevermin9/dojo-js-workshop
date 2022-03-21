@@ -77,6 +77,8 @@ const counter1 = makeCounter();
 counter1();
 counter1();
 
+const counter2 = makeCounter();
+
 counter2(); // ?
 counter2(); // ?
         "
@@ -182,7 +184,7 @@ function sum(num1) {
     <ul>
         <li>
             <code>Array#includes</code>,
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">here docs</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">here docs</a>
         </li>
 
         <li>

@@ -4,15 +4,15 @@
     </h2>
 
     <p>
-        According to the spec, the String type is the set of all ordered sequences of zero or more 16-bit unsigned
+        According to the spec, the <code>String</code> type is the set of all ordered sequences of zero or more 16-bit unsigned
         integer values ("elements") up to a maximum length of 2<sup>53</sup>-1 elements.
-        The String type is generally used to represent textual data in a running ECMAScript program,
-        in which case each element in the String is treated as a UTF-16 code unit value.
+        The <code>String</code> type is generally used to represent textual data in a running ECMAScript program,
+        in which case each element in the <code>String</code> is treated as a UTF-16 code unit value.
         Each element is regarded as occupying a position within the sequence.
-        These positions are indexed with non-negative integers. 
-        he first element (if any) is at index 0, the next element (if any) at index 1, and so on.
-        The length of a String is the number of elements (i.e., 16-bit values) within it.
-        The empty String has length zero and therefore contains no elements.
+        These positions are indexed with non-negative integers.
+        The first element (if any) is at index 0, the next element (if any) at index 1, and so on.
+        The length of a <code>string</code> is the number of elements (i.e., 16-bit values) within it.
+        The empty <code>string</code> has length zero and therefore contains no elements.
     </p>
 
     <code-snippet

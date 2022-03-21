@@ -4,7 +4,7 @@
     </h2>
 
     <p>
-        According to the spec, the Null type has exactly one value, called <code>null</code>.
+        According to the spec, the <code>Null</code> type has exactly one value, called <code>null</code>.
         In JavaScript, <code>null</code> is not a "reference to a non-existing object" or a "null pointer"
         like in some other languages.
         It's just a special value which represents "nothing", "empty" or "value unknown".

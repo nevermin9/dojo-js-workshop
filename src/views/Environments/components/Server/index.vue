@@ -4,8 +4,8 @@
     </h2>
 
     <p>
-        JavaScript had been created for browsers.
-        By the time it had been becoming better and better.
+        JavaScript was created for browsers.
+        By the time it was becoming better and better.
         Web Applications like Gmail, Google Maps showed that this language can
         give high performance and great user experience.
         Thankfully V8 engine and "Web 2.0", JavaScript is considered a serious language.

@@ -4,14 +4,14 @@
     </h2>
 
     <p>
-        The Number type represents both integer and floating point numbers.
-        According to the spec, the Number type has exactly 18 437 736 874 454 810 627 (that is, 264 - 253 + 3) values,
-        representing the double-precision 64-bit format IEEE 754-2019 values as specified in the IEEE Standard for Binary Floating-Point Arithmetic
+        The <code>Number</code> type represents both integer and floating point numbers.
+        According to the spec, the <code>Number</code> type has exactly 18 437 736 874 454 810 627 (that is, 264 - 253 + 3) values,
+        representing the double-precision 64-bit format IEEE 754-2019 values as specified in the IEEE Standard for Binary Floating-Point Arithmetic.
 
     </p>
 
     <p>
-        Values of the Number type:
+        Values of the <code>Number</code> type:
     </p>
 
     <ul>
@@ -62,9 +62,7 @@
     />
 
     <p>
-        <code>
-            Infinity
-        </code>
+        <code>Infinity</code>
         represents the mathematical Infinity ∞. It is a special value that's greater than any number.
     </p>
 
@@ -77,16 +75,12 @@ const inf = Infinity;
     />
 
     <p>
-        <code>
-            -Infinity
-        </code>
+        <code>-Infinity</code>
         same as positive <code>Infinity</code>, but represents the smallest number.
     </p>
 
     <p>
-        <code>
-            NaN
-        </code>
+        <code>NaN</code>
         represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
     </p>
 
@@ -97,9 +91,7 @@ console.log( 'i am a string' / 3 ) // prints NaN
     />
 
     <p>
-        <code>
-            NaN
-        </code>
+        <code>NaN</code>
         is sticky. Any farther  mathematical operation on <code>NaN</code> returns <code>NaN</code>
     </p>
 
@@ -145,7 +137,7 @@ NaN === NaN // false;
         </li>
 
         <li>
-            Indeterminate form (e.g. <code>undefine + undefined</code> )
+            Indeterminate form (e.g. <code>undefined + undefined</code> )
         </li>
         
         <li>

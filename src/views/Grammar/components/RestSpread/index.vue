@@ -40,11 +40,11 @@ sum(1, 11, 7, 8, 10, 5); // 42
 const store = {};
 
 function saveUserData(userName, ...data) {
-    obj[userName] = data; 
+    store[userName] = data; 
 }
 
 saveUserData('John', 25, 'Black', 'Developer');
-obj['John']; // [25, 'Black', 'Developer'];
+store['John']; // [25, 'Black', 'Developer'];
 
         "
     />
@@ -183,7 +183,7 @@ const bond = {};
 
 const userData = ['James', 'Bond', '007', 'Casino Royale'];
 
-const [bond.firstName, , bond.codeName] = userData;
+[bond.firstName, , bond.codeName] = userData;
 
 bond.firstName; // 'James'
 bond.codeName; // '007'

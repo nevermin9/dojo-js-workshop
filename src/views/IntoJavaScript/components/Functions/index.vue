@@ -43,29 +43,6 @@ sayHelloTo('Hanna');
     </p>
 
     <p>
-        A variable declared inside a function is only visible inside that function.
-        In the example above, variable <code>greeting</code> is accessable only in <code>sayHelloTo</code>
-    </p>
-
-    <p>
-        But function can access variable in the outer lexical scope:
-    </p>
-
-    <code-snippet
-        code="
-const greeting = 'hello, '
-
-function sayHelloTo(name) {
-    console.log(greeting + name);
-}
-
-// and we can call it many many times
-sayHelloTo('John'); // hello, John
-sayHelloTo('Hanna'); // hello, Hanna
-        "
-    />
-
-    <p>
         Functions <strong>always</strong> return some value:
     </p>
 

@@ -26,7 +26,7 @@ if (walletBalance > price) {
 
     <p>
         <code>If</code> statement requires an expression in between the parentheses <code>( )</code> that can be treated
-        as either <code>true</code> or <code>false</code>
+        as either <code>true</code> or <code>false</code>.
         In the code snippet above, we provided the expression <code>walletBalance > price</code>,
         which will evaluate to <code>true</code> or <code>false</code> depending on the value of <code>walletBalance</code>
         or <code>price</code>

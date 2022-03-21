@@ -4,7 +4,7 @@
     </h2>
 
     <p>
-        The Boolean type represents a logical entity having two values, called <code>true</code> and <code>false</code>.
+        The <code>Boolean</code> type represents a logical entity having two values, called <code>true</code> and <code>false</code>.
     </p>
 
     <p>

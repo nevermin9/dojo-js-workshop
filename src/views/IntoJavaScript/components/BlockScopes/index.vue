@@ -4,9 +4,9 @@
     </h2>
 
     <p>
-        Programming is about a proper order and a good organization of things. To do so, we can use <i>block</i>
-        Block statement groups zero or more statements and create the lexical scope.
-        In JavaScript, a block is defined by wrapping one or more statements inside a curly-brace pair <code>{ .. }</code>
+        Programming is about a proper order and a good organization of things. To do so, we can use <i>block</i>.
+        The block statement groups zero or more statements and create the lexical scope.
+        In JavaScript, a block is defined by wrapping one or more statements inside a curly-brace pair <code>{ .. }</code>.
         Consider:
     </p>
 

@@ -15,7 +15,7 @@
     <p>
         In JavaScript coercion can be one of two types: <i>explicit coercion</i> or <i>implicit coercion</i>.
         <i>Explicit coercion</i> is when it is obvious from looking at the code that a type conversion is intentionally occurring.
-        <i>Implicit coercion</i> is when the type conversion will occur as a less obvious side effect of some other intentional operation.
+        <i>Implicit coercion</i> is when the type conversion will occur as a less obvious side effect of some other intentional operations.
     </p>
 
     <code-snippet

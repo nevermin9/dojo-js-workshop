@@ -17,37 +17,26 @@
         The statement has four expressions in it:
         <ul>
             <li>
-                <code>
-                    41
-                </code>
+                <code>41</code>
 
                 is a <i>literal value expression</i>
             </li>
 
             <li>
-                <code>
-                    x
-                </code>
-
+                <code>x</code>
                 is a <i>variable expression,</i>
                 which means to retrieve its current value
             </li>
 
             <li>
-                <code>
-                    41 + x
-                </code>
+                <code>41 + x</code>
 
                 is an <i>arithmetic expression,</i>
                 which means to do the addition
             </li>
 
             <li>
-                <code>
-                    const answer = 41 + x
-                </code>
-
-                is an <i>assignment expression,</i>
+                <code>const answer = 41 + x</code> is an <i>assignment expression,</i>
                 which means to assign the result of the
                 <code>41 + x</code>
                 expression to the variable

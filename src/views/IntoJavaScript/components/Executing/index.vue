@@ -9,8 +9,8 @@
 
     <p>
         To make computer directly understand what to do, we use special utility either an
-        <i>interpreter</i> or <i>compiler</i> to translate the code we wrote into commands a computer
-        can understand
+        <i>interpreter</i> or a <i>compiler</i> to translate the code we wrote into commands a computer
+        can understand.
     </p>
 
     <p>

@@ -10,8 +10,8 @@
     </p>
 
     <p>
-        For example, to execute JavaScript in Google Chrome, it uses V8 engine, which is written in C++
-        Later, we will cover another environment for JavaScript - node. This runtime uses V8 as well.
+        For example, to execute JavaScript in Google Chrome, it uses V8 engine, which is written in C++.
+        Later, we will cover another environment for JavaScript - Nodejs. This runtime uses V8 as well.
         Other browsers use engine of their own.
     </p>
 
@@ -30,7 +30,7 @@ const sum = 3 + b;
             />
 
             Here <code>const</code> is token, <code>sum</code> is token, <code>+</code>, <code>3</code> and <code>b</code> are tokens too.
-            After the code is broken down into tokens, it is given to the syntax parser which converts the code into an Abstract Syntax Tree
+            After the code is broken down into tokens, it is given to the syntax parser which converts the code into an Abstract Syntax Tree.
 
             For the statement above, AST looks like:
 
@@ -108,8 +108,6 @@ const sum = 3 + b;
             Call Stack is the place where each individual functions, when called are pushed to the stack, and popped out
             after their execution. When the interpreter interprets the code, using an object structure, where the keys are the byte
             code and the values the functions which handle the corresponding byte code.
-            The V8 engine orders the values in the form of a list in memory, which is saved into a Map thereby saving
-            a lot of memory.
         </li>
     </ol>
 
@@ -118,6 +116,35 @@ const sum = 3 + b;
         <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ&ab_channel=JSConf">this video</a> and practice alongside,
         because this topic extremely important to understand.
     </p>
+
+    <p>
+        For now, the most important thing for us is <i>Call Stack</i>.
+        Basically, Call Stack records where in the program we are.
+        If we get into a function, we push it into the Call Stack,
+        if we return from the function, we pop it out of the Call Stack.
+        Consider:
+    </p>
+
+    <code-snippet
+        code="
+function getName() {
+    return 'Bradley';
+}
+
+function printName() {
+    const name = getName();
+    console.log(name);
+}
+
+printName();
+        "
+    />
+
+    <p>
+        Call Stack for this code snippet looks as follows:
+    </p>
+
+    <img src="@/assets/images/call-stack.jpg" />
 </template>
 
 <script lang="ts">

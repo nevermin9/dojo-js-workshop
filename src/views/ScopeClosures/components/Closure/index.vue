@@ -46,7 +46,6 @@ greetJohn(); // prints 'hello, John!';
 
 
     <p>
-        So, <strong>closure is when a function can remember and access its lexical scope even when it's invoked outside its lexical scope.</strong>
         Closure lets the function continue to access the lexical scope <strong>it was defined in at author-time</strong>.
     </p>
 

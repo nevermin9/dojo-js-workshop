@@ -1,6 +1,6 @@
 <template>
     <h2>
-        Create your first app with Node.js
+        Create your first server with Node.js
     </h2>
 
     <p>
@@ -9,11 +9,11 @@
     </p>
 
     <p>
-        2. Install Node.js
+        2. Install Node.js.
         There are two ways:
     </p>
 
-    <ol>
+    <ul>
         <li>
             Download and install Node.js itself. <a href="https://nodejs.org/en/download/">Official site</a>
         </li>
@@ -21,7 +21,7 @@
         <li>
             Download and install <a href="https://github.com/nvm-sh/nvm">nvm</a> - Nodejs Version Manager
         </li>
-    </ol>
+    </ul>
 
     <p>
         If you choose first option, you will install only one version of Node.js.

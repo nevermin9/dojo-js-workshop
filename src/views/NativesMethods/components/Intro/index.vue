@@ -53,7 +53,7 @@
 
     <p>
         These are the major we will cover.
-        But JavaScript contains also <code>Function()</code>, <code>Date()</code>, <code>Error()</code>, <code>RegExp()</code> and more.
+        But JavaScript includes also <code>Function()</code>, <code>Date()</code>, <code>Error()</code>, <code>RegExp()</code> and more.
         You can learn about them when you will need them during your work.
     </p>
 </template>

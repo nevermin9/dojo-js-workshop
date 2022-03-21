@@ -129,7 +129,7 @@ const newCoffeeMachine = coffeeMachine;
 // kill reference to coffeeMachine object
 coffeeMachine = null;
 
-newCoffeeMachine.makeCoffee(); //  TypeError: Cannot read property 'name' of null
+newCoffeeMachine.makeCoffee(); //  TypeError: Cannot read property 'amountOfCoffeeKg' of null
         "
     />
 

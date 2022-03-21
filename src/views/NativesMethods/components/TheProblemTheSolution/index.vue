@@ -152,7 +152,7 @@ console.log(lowerRandom); // prints 'random'
         </li>
 
         <li>
-            The special objects is destroyed, leave the primitives alone.
+            The special objects are destroyed, leave the primitives alone.
         </li>
     </ul>
 
@@ -163,7 +163,7 @@ console.log(lowerRandom); // prints 'random'
     <code-snippet
         code="
 // we will cover word 'new' later
-// for now, just try to memorize, that creating of new objects via constuctor function (here Number is constructor)
+// for now, just try to memorize, to create new objects via constuctor function (here Number is constructor)
 // you should use 'new' keyword
 const floatNum = new Number(3.14);
 typeof floatNum // 'object'

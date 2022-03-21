@@ -11,8 +11,8 @@
     <p>
         JS uses <i>dynamic typing</i>, meaning variables can hold values any type without any type enforcement.
         To declare variable in JavaScript, we have to use one of the reserved words -
-        <code>const</code> or <code>let</code>
-        Earlier in JavaScript for this puprpose we had to use <code>var</code>, but today is deprecated approach.
+        <code>const</code> or <code>let</code>.
+        Earlier in JavaScript for this purpose we had to use <code>var</code>, but today is deprecated approach.
     </p>
 
     <p>

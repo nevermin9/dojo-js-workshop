@@ -37,8 +37,8 @@
     </p>
 
     <p>
-        Module should <code>export</code> what they want to be accessible from outside and
-        <code>import</code> what they need.
+        Module should <code>export</code> what it wants to be accessible from outside and
+        <code>import</code> what it needs.
     </p>
 
     <code-snippet
@@ -54,7 +54,7 @@ export const user = {
 };
 
 // 2.js
-import { user } from '1.js';
+import { user } from './path/to/file/1.js';
 // cannot access to arr1 or doSomething()
 user; // { name: 'Peter' }
         "
@@ -72,12 +72,12 @@ user; // { name: 'Peter' }
 console.log('Hello, I am from 1.js module');
 
 // 2.js
-import '1.js';
+import './path/1.js';
 // will print 'Hello, I am from 1.js module'
 
 
 // 3.js
-import '1.js';
+import './path/1.js';
 // prints nothing
         "
     />
@@ -95,11 +95,11 @@ export function printGreeting() {
 }
 
 // 2.js
-import { printGreeting } from '1.js';
+import { printGreeting } from './path/1.js';
 printGreeting();
 
 // 3.js
-import { printGreeting } from '1.js';
+import { printGreeting } from './path/1.js';
 printGreeting();
         "
     />
@@ -121,11 +121,11 @@ export const user = {
 };
 
 // 2.js
-import { user } from '1.js';
+import { user } from './path/1.js';
 user.name = 'James';
 
 // 3.js
-import { user } from '1.js';
+import { user } from './path/1.js';
 user.name; // 'James';
         "
     />
@@ -143,7 +143,7 @@ user.name; // 'James';
         code="
 export const names = ['Eva', 'John', 'Bob'];
 
-export getRandomName() {
+export function getRandomName() {
     // body
 }
 
@@ -159,13 +159,13 @@ export class User {
 
     <code-snippet
         code="
-export const names = ['Eva', 'John', 'Bob'];
+const names = ['Eva', 'John', 'Bob'];
 
-export getRandomName() {
+function getRandomName() {
     // body
 }
 
-export class User {
+class User {
     // body
 }
 
@@ -179,7 +179,7 @@ export { names, getRandomName, User };
 
     <code-snippet
         code="
-import { names, getRandomName, User } from 'file.js'
+import { names, getRandomName, User } from './path/file.js'
 
 const user = new User();
         "
@@ -211,13 +211,13 @@ export { names as userNames, getRandomName as getRandomUserName, User as UserCla
 
 // 2.js
 
-import { userNames as nameList } from '1.js';
+import { userNames as nameList } from './path/1.js';
         "
     />
 
     <p>
         Sometimes, it is handy to have one useful entity per a module.
-        For example, the module declares only one class or function.
+        For example, the module declares only one <code>class</code> or <code>function</code>.
         With such an approach, code navigation becomes easier if files
         are well-named and structured into folders.
         So, modules provide a special <code>export default</code> syntax to make
@@ -249,7 +249,7 @@ const bob = new User('Bob');
     </p>
 
     <p>
-        The use of <code>export default</code> doesn't limit your use of "named export":
+        The use of <code>export default</code> doesn't limit you to use of "named export":
     </p>
 
     <code-snippet

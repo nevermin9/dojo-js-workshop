@@ -60,15 +60,15 @@ str; // 'javascript'
 
     <p>
         To create <code>object</code> we can use <code>{}</code> - curly braces.
-        Than we can define zero or more keys (aka property names) and, after semicolon, property values
+        Than we can define zero or more keys (aka property names) and, after semicolon, property values.
         Property value can be any JavaScript type:
-        <code>number</code>
-        <code>bigint</code>
-        <code>string</code>
-        <code>null</code>
-        <code>undefined</code>
-        <code>boolean</code>
-        <code>symbol</code>
+        <code>number</code>,
+        <code>bigint</code>,
+        <code>string</code>,
+        <code>null</code>,
+        <code>undefined</code>,
+        <code>boolean</code>,
+        <code>symbol</code>,
         <code>object</code>
         But, property keys can be only of type <code>strings</code> or <code>symbol</code>
     </p>
@@ -108,7 +108,7 @@ console.log(obj2.name) // also prints 'Sam'
     />
     
     <p>
-        The <code>object</code>s are comparing by reference, not by value;
+        The <code>object</code>s are compared by reference, not by value;
     </p>
 
     <code-snippet
@@ -130,7 +130,7 @@ console.log(data1 === data3); // false
     />
 
     <p>
-        In contrary to <code>object</code>, all primitive values are compering by value:
+        In contrary to <code>object</code>, all primitive values are compered by value:
     </p>
 
     <code-snippet
@@ -227,7 +227,7 @@ const arr = [];
     />
 
     <p>
-        Really rarely you can meet a declaration of the array via global constructor:
+        Really rarely you can face with a declaration of the array via global constructor:
     </p>
 
     <code-snippet
@@ -278,8 +278,9 @@ console.log(arr.length); // prints 5;
 console.log(arr[1]) // print 12;
 
 // add element to the end of array
+// every array has method .push(el) which adds el to the end of array
 // even function can be element of the arrays
-arr[arr.length - 1] = addTwo;
+arr.push(addTwo);
 
 // arr.length was changed
 console.log(arr.length); // prints 6;
@@ -335,7 +336,7 @@ console.log(arr[1]) // ?
     />
 
     <p>
-        As inside the <code>object</code>, you can define any property inside <code>array</code>
+        As inside the <code>object</code>, you can define any property inside <code>array</code>.
         But don't do this, because it is bad practice too.
     </p>
 
@@ -477,17 +478,22 @@ const returnObjectOneLine = (propertyKey) => ({ [propertyKey]: 'value' });
         "
             />
 
-            This function has some limitations. For example, arrow function
+            <!-- This function has some limitations. For example, arrow function
             does not have its own bindings to <code>this</code>.
-            We will cover <code>this</code> keyword later.
+            We will cover <code>this</code> keyword later. -->
             This type of functions often used to create function 'on-the-fly' e.g. as arguments of the method
             <code-snippet
                 code="
 const arr = [1, 2, 3];
 // Array.prototype.map is a method of arrays that used to modify elements of the existing array
 // In this case it just adds 2 for every element of arr
-arr.map((el) => el + 2);
+arr.map((el, index, array) => el + 2);
 arr; // [3, 4, 5];
+
+// in comparing with
+arr.map(function(el, index, array) {
+    return el + 2;
+});
         "
     />
         </li>

@@ -25,7 +25,7 @@ let b = a + 1;
     </p>
 
     <p>
-        Here the most common operators in intoJavaScript
+        Here the most common operators in JavaScript
 
         <ul>
             <li>
@@ -50,21 +50,11 @@ let b = a + 1;
 
             <li>
                 Compound assignment.
-                <code>
-                    +=
-                </code>,
-                <code>
-                    -=
-                </code>,
-                <code>
-                    *=
-                </code>,
-                <code>
-                    /=
-                </code>,
-                <code>
-                    %=
-                </code>
+                <code>+=</code>,
+                <code>-=</code>,
+                <code>*=</code>,
+                <code>/=</code>,
+                <code>%=</code>
                 - combine a math operators with assignment
                 ( e.g. <code>a += 2</code> the same as <code>a = a + 2</code> )
             </li>
@@ -75,10 +65,10 @@ let b = a + 1;
             </li>
 
             <li>
-                Object property access, e.g. <code>.</code> in <code>console.log</code>
+                Object property access, e.g. <code>.</code> in <code>console.log</code>.
 
                 Objects are values that hold other values at specific named locations called properties.
-                <code> obj.a </code> means an object value called
+                <code>obj.a</code> means an object value called
                 <code>obj</code> with a property of the name <code>a</code>.
                 Properties can alternatively be accessed as <code>obj["a"]</code>.
             </li>
@@ -91,7 +81,7 @@ let b = a + 1;
                 strict equals;
                 <code>!=</code>
                 loose not-equals;
-                <code></code>
+                <code>!==</code>
                 strict not-equels;
 
                 (e.g. <code>a == b</code> )

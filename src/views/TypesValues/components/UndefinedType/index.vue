@@ -5,7 +5,7 @@
 
     <p>
         The type <code>Undefined</code> type has exactly one value, called <code>undefined</code>.
-        Any variable that has not been assigned a value has the value undefined.
+        Any variable that has not been assigned a value has the value <code>undefined</code>.
     </p>
 
     <code-snippet 
@@ -25,7 +25,7 @@ typeof a; // 'undefined'
     <code-snippet
         code="
 let a;
-a; // unefined
+a; // undefined
 b; // ReferenceError: b is not defined
         "
     />
@@ -37,7 +37,7 @@ b; // ReferenceError: b is not defined
     <code-snippet
         code="
 let a;
-typeof a; // unefined
+typeof a; // undefined
 typeof b; // undefined
         "
     />

@@ -101,7 +101,7 @@ Boolean(zero); // false
     <p>
         Via the unary operator <code>!</code>.
         Operator <code>!</code> (which literally means "NOT") coerces value to a <code>boolean</code> value and
-        flips he value from truthy to falsy or vice versa.
+        flips the value from truthy to falsy or vice versa.
     </p>
 
     <code-snippet

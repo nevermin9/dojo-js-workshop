@@ -8,6 +8,7 @@ import Variables from "./Variables/index.vue";
 import BlockScopes from "./BlockScopes/index.vue";
 import Conditionals from "./Conditionals/index.vue";
 import Functions from "./Functions/index.vue";
+import Loops from "./Loops/index.vue"
 
 const components = [
     Code,
@@ -19,6 +20,7 @@ const components = [
     Variables,
     BlockScopes,
     Conditionals,
+    Loops,
     Functions,
 ]
 

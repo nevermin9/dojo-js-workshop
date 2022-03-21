@@ -56,17 +56,16 @@
     </p>
 
     <p>
-        All of these types except object are called "primitives".
+        All of these types except <code>object</code> are called "primitives".
     </p>
 
     <p>
         The <code>typeof</code> operator inspects the type of the given value,
-        and always returns one of seven string values -- surprisingly,
+        and always returns one of eight string values - surprisingly,
         there's not an exact 1-to-1 match with the seven built-in types we just listed.
     </p>
 
     <code-snippet
-        summary="Task #1 solution"
         code="
 typeof undefined     === 'undefined'; // true
 typeof null          === 'object';    // true
@@ -80,7 +79,7 @@ typeof 1n            === 'bigint';    // true
     />
 
     <p>
-        <code>typeof null === 'object'</code> is a bug of JavaScript, which has persisted pretty long time.
+        <code>typeof null === 'object'</code> is a bug of JavaScript, which has persisted pretty long time
         and will likely never be fixed because there is too much code in the world that relies on its buggy behavior.
     </p>
 

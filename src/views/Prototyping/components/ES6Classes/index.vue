@@ -73,7 +73,7 @@ jack.printName(); // 'Jack'
     />
 
     <p>
-        What exactly is a <code>class</code>? Let's write such a declaration and use typeof to find out.
+        What exactly is a <code>class</code>? Let's write such a declaration and use <code>typeof</code> to find out.
     </p>
 
     <code-snippet
@@ -110,7 +110,7 @@ answer; // 'function'
             (assumed empty if we don't write such method).
         </li>
         <li>
-            Stores class methods, such as <code>printName</code>, in User.prototype.
+            Stores class methods, such as <code>printName</code>, in <code>User.prototype</code>.
         </li>
     </ol>
 
@@ -277,7 +277,7 @@ class User {
     }
 
     showDataAboutUser() {
-        console.log(`${this.name} is ${age} old, the role is ${User.role}`);
+        console.log(`${this.name} is ${this.age} old, the role is ${User.role}`);
     }
 }
         "

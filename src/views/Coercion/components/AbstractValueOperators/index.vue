@@ -20,7 +20,7 @@
             <code>null</code> becomes <code>"null"</code>
         </li>
         <li>
-            <code>undefine</code> becomes <code>"undefine"</code>
+            <code>undefined</code> becomes <code>"undefined"</code>
         </li>
         <li>
             <code>true</code> and <code>false</code> become <code>"true"</code> and <code>"false"</code>
@@ -75,7 +75,7 @@ explicit; // '1,2,3'
             <code-snippet
                 code="
 function stringMe() {
-return 42;
+    return 42;
 }
 
 const implicit = '' + stringMe;
@@ -143,7 +143,7 @@ result; // ????
     </ul>
 
     <p>
-        The abstract operation <i>ToBoolean</i> just takes an argument and returns a <code>boolean</code>.
+        The abstract operation <code>ToBoolean</code> just takes an argument and returns a <code>boolean</code>.
         It converts argument to a value of type Boolean according to the JS spec.
         According to the JS spec, all of JavaScript's values can be divided into two categories:
     </p>

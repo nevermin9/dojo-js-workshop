@@ -9,8 +9,8 @@
     </p>
 
     <p>
-        We will cover <code>prototype</code> later, but for better understanding now, we can define <i>prototype</i>,
-        as a link to the <code>object</code> that have properties and methods. All <code>objects</code> created via constructor
+        We will cover <code>prototype</code> later, but for better understanding now, you can think of <i>prototype</i>,
+        as a the <code>object</code> that have properties and methods. All <code>objects</code> created via constructor
         of the prototype, has access to its properties and methods.
         It is the implementation of <i>inheritance</i> mechanism in JavaScript.
     </p>
@@ -25,9 +25,7 @@
 
     <ul>
         <li>
-            <code>
-                String#indexOf(substring)
-            </code>
+            <code>String#indexOf(substring)</code>
             returns the index of the first occurrence of the specified substring.
         </li>
 
@@ -37,16 +35,12 @@
         </li>
 
         <li>
-            <code>
-                String#concat(str1, str2)
-            </code>
+            <code>String#concat(str1, str2)</code>
             concatenates the string arguments to the calling string and returns a new string.
         </li>
 
         <li>
-            <code>
-                String#split(separator)
-            </code>
+            <code>String#split(separator)</code>
             divides a string into an ordered list of substrings, puts these substrings into an array, and returns the array.
         </li>
     </ul>
@@ -78,33 +72,23 @@ superString.split('') // ['J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
 
     <ul>
         <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">
-                Numbers
-            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Numbers</a>
         </li>
 
         <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">
-                Booleans
-            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Booleans</a>
             but they have only two inherited methods - <code>toString</code> and <code>valueOf</code>
         </li>
         <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">
-                Arrays
-            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Arrays</a>
         </li>
         <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">
-                Objects
-            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Objects</a>
         </li>
     </ul>
 
     <p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">
-            Other built-in natives
-        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">Other built-in natives</a>
     </p>
 
     <p>

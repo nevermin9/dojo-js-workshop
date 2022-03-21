@@ -30,6 +30,7 @@ const str2 = '0';
 
 num1 + num2; // 42
 str1 + str2; // '420';
+str1 + num1 // '4141';
         "
     />
 
@@ -141,7 +142,7 @@ obj - arr2; // ???
 
     <ol>
         <li>
-            The test expression in an <code>if (...) {...} </code> statement
+            The test expression in an <code>if (...) {...}</code> statement
         </li>
 
         <li>
@@ -149,7 +150,7 @@ obj - arr2; // ???
         </li>
 
         <li>
-            The test expression in <code>while (...)</code> and <code>do {} while (...) </code> loops
+            The test expression in <code>while (...)</code> and <code>do {} while (...)</code> loops
         </li>
 
         <li>
@@ -439,7 +440,7 @@ if (a == null) {
     console.log('i dont care whether a is null or a is undefine')
 }
 
-if (a === null || a === undefine) {
+if (a === null || a === undefined) {
     console.log('verbose code')
 }
         "

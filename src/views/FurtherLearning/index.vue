@@ -36,7 +36,7 @@
         </li>
 
         <li>
-            Recursion and stack.
+            Recursion.
         </li>
 
         <li>
