@@ -15,13 +15,13 @@ const components = [
     Statements,
     Expressions,
     Executing,
-    Operators,
-    CodeComments,
     Variables,
-    BlockScopes,
+    Operators,
+    Functions,
     Conditionals,
     Loops,
-    Functions,
+    BlockScopes,
+    CodeComments,
 ]
 
 export default components;

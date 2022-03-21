@@ -32,7 +32,12 @@
 
                 <n-layout
                     ref="layout"
-                    content-style="padding: 94px 24px 84px;"
+                    :content-style="{
+                        'padding-top': '94px',
+                        'padding-left': '24px',
+                        'padding-right': '24px',
+                        'padding-bottom': isIncreasedPadding ? '550px' : '84px',
+                    }"
                     :native-scrollbar="false"
                 >
                     <section>
@@ -53,7 +58,7 @@
                 </n-button>
             </n-layout>
 
-            <resizable-block class="main__resizable-block">
+            <resizable-block @openEvent="increasePadding" class="main__resizable-block">
                 <iframe
                     class="iframe-code"
                     src="https://codesandbox.io/embed/cranky-danilo-p6swc1?fontsize=14&hidenavigation=1&theme=dark&codemirror=1&expanddevtools=1"
@@ -101,10 +106,15 @@ export default defineComponent({
 
     setup() {
         const layout = ref(null);
+        const isIncreasedPadding = ref(false);
 
         function scrollToTop() {
             // @ts-ignore
             layout.value.$el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function increasePadding(openEvent: { [key: string]: boolean }) {
+            isIncreasedPadding.value = openEvent.isOpen;
         }
 
         return {
@@ -113,6 +123,8 @@ export default defineComponent({
             routesNames,
             layout,
             scrollToTop,
+            increasePadding,
+            isIncreasedPadding,
         }
     },
 })

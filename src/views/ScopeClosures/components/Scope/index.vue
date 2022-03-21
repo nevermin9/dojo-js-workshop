@@ -33,14 +33,13 @@ foo(num);
     </p>
 
     <p>
-        There are two primary models of the scope. The first is most common and JavaScript uses it as well -
-        <i>Lexical Scope</i>. The another one is less common and used by some languages - <i>Dynamic Scope</i>
+        JavaScript model of the scope is called <i>Lexical Scope</i>.
     </p>
 
     <p>
         <i>Lexical Scope</i> is scope that is defined at lexing time.
-        In other words, lexical scope is based on where variables and blocks of scope are authored,
-        by you, at write time, and thus is (mostly) set in stone by the time the lexer processes your code.
+        In other words, lexical scope is based on where variables and blocks of scope are declared,
+        by you, at write time, and thus is (mostly) set in stone by the time the engine processes your code.
     </p>
 
     <code-snippet

@@ -91,7 +91,7 @@ superString.split('') // ['J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">Other built-in natives</a>
     </p>
 
-    <p>
+    <!-- <p>
         Sometimes, you can face method straight from build-in native, not from its <code>.prototype</code>
         (e.g. <code>Object.keys</code> or <code>Number.isNaN</code>).
         It means, that <code>object</code> created via appropriate constructor aka build-in native doesn't have
@@ -115,7 +115,7 @@ Number.isNaN(num);
 // Object.keys returns array of property keys of the given object
 Object.keys(obj) // [ 'name', 'country' ]
         "
-    />
+    /> -->
 </template>
 
 <script lang="ts">

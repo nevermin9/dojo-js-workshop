@@ -64,14 +64,14 @@ let b = a + 1;
                 (e.g. <code>a++</code> is the same as <code>a = a + 1</code> )
             </li>
 
-            <li>
+            <!-- <li>
                 Object property access, e.g. <code>.</code> in <code>console.log</code>.
 
                 Objects are values that hold other values at specific named locations called properties.
                 <code>obj.a</code> means an object value called
                 <code>obj</code> with a property of the name <code>a</code>.
                 Properties can alternatively be accessed as <code>obj["a"]</code>.
-            </li>
+            </li> -->
 
             <li>
                 Equality.
@@ -101,7 +101,7 @@ let b = a + 1;
                 (e.g. <code>a >= b</code> )
             </li>
 
-            <li>
+            <!-- <li>
                 Logical operators;
                 <code>&#38;&#38;</code>
                 and;
@@ -112,7 +112,7 @@ let b = a + 1;
                 
                 in <code>a || b</code> JS should select <code>a</code> OR <code>b</code>,
                 depend on which variable consist of <i>truthy</i> value
-            </li>
+            </li> -->
         </ul>
     </p>
 </template>

@@ -65,11 +65,14 @@ export default defineComponent({
         NIcon,
     },
 
-    setup() {
+    emits: ["openEvent"],
+
+    setup(props, { emit }) {
         const isOpen = ref(false);
 
         const toggle = () => {
             isOpen.value = !isOpen.value;
+            emit("openEvent", { isOpen: isOpen.value });
         };
 
         return {

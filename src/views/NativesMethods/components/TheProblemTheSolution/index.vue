@@ -96,26 +96,10 @@ person.makeMagic() // prints 'Accio'
     </ul>
 
     <p>
-        Solution is:
-    </p>
-
-    <ul>
-        <li>
-            Primitives are still primitive. A single value, as desired.
-        </li>
-
-        <li>
-            The language allows access to methods and properties of strings, numbers, booleans and symbols.
-        </li>
-
-        <li>
-            In order for that to work, a special "object wrapper" that provides the extra functionality is created, and then is destroyed.
-        </li>
-    </ul>
-
-    <p>
-        The natives come to the rescue. The natives serve as wrappers of the primitives and give us access
-        to the methods and properies we need work with. This process is called <i>boxing</i>.
+        Solution is to wrap primitive value in the object that gives access to useful methods.
+        And natives do this job very well.
+        The natives serve as wrappers of the primitives and give us access
+        to the methods and properties we need work with. This process is called <i>boxing</i>.
         Consider:
     </p>
 
@@ -142,7 +126,7 @@ console.log(lowerRandom); // prints 'random'
     <ul>
         <li>
             The <code>floatNum</code> and <code>random</code> are primitives.
-            In the moment of accessing their properies, special objects
+            In the moment of accessing their properties, special objects
             (via natives <code>Number</code> and <code>String</code> respectively) that knows their values and has
             appropriate methods - <code>.toFixed</code> and <code>.toLowerCase</code>
         </li>
@@ -163,7 +147,7 @@ console.log(lowerRandom); // prints 'random'
     <code-snippet
         code="
 // we will cover word 'new' later
-// for now, just try to memorize, to create new objects via constuctor function (here Number is constructor)
+// for now, just try to memorize, to create new objects via constructor function (here Number is constructor)
 // you should use 'new' keyword
 const floatNum = new Number(3.14);
 typeof floatNum // 'object'
