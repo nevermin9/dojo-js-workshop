@@ -144,7 +144,9 @@ printName();
         Call Stack for this code snippet looks as follows:
     </p>
 
-    <img src="@/assets/images/call-stack.jpg" />
+    <div class="image-wrapper">
+        <img class="image-wrapper__img" src="@/assets/images/call-stack.jpg" />
+    </div>
 </template>
 
 <script lang="ts">
