@@ -8,7 +8,7 @@ const routesNames = {
     grammar: "Grammar",
     prototyping: "Prototyping",
     environments: "Environments",
-    furtherLearning: "Farther learning",
+    furtherLearning: "Further learning",
 };
 
 export default routesNames;

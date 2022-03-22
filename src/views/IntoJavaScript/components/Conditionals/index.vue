@@ -54,7 +54,7 @@ if (walletBalance > price) {
 
     <p>
         Or, you can even chain several conditionals via <code>else if (condition)</code>
-        JS engine executes the first block, wich condition will return <code>true</code>
+        JS engine executes the first block, which condition will return <code>true</code>
         It will stop checking next conditions, after execution.
     </p>
 
@@ -97,6 +97,128 @@ if (walletBalance > coffeePrice) {
     console.log('buy a cup of tea');
 }
 "
+    />
+
+    <p>
+        The conditional (ternary) operator is the only JavaScript operator that takes three operands:
+        a condition followed by a question mark (<code>?</code>), then an expression to execute if the condition
+        is truthy followed by a colon (<code>:</code>), and finally the expression to execute if the condition is falsy.
+        This operator is frequently used as an alternative to an <code>if...else</code> statement.
+    </p>
+
+    <code-snippet
+        code="
+//SYNTAX
+condition ? exprIfTrue : exprIfFalse;
+// =====
+
+const obj1 = { lang: 'JavaScript' };
+const obj2 = { lang: 'Python' };
+const falsyVal = null;
+
+const result = falsyVal ? obj2 : obj1;
+result; // { lang: 'JavaScript' };
+
+// is the same as follows
+let result;
+if (falsyVal) {
+    result = obj2;
+} else {
+    result = obj1;
+}
+
+const isBaby = false;
+const isTeenager = false;
+
+// ternary operator can be chained with another one;
+// but it is not a good practice
+const drink = isBabe ? 'milk' : isTeenager ? 'tea' : 'beer';
+        "
+    />
+
+    <p>
+        The logical OR <code>||</code> operator (logical disjunction) for a set of operands is <code>true</code>
+        if and only if one or more of its operands is <code>true</code>.
+        It is typically used with boolean (logical) values.
+        When it is, it returns a <code>boolean</code> value.
+        However, the <code>||</code> operator actually returns the value of one of the specified operands,
+        so if this operator is used with non-<code>boolean</code> values,
+        it will return a non-<code>boolean</code> value.
+    </p>
+
+    <code-snippet
+        code="
+//SYNTAX
+val1 || val2 (|| valN);
+// =====
+
+const obj1 = { lang: 'JavaScript' };
+const obj2 = { lang: 'Python' };
+
+const result = obj2 || obj1;
+result; // { lang: 'Python' };
+
+// is the same as follows
+
+const isBaby = false;
+const isTeenager = false;
+const isChild = false;
+
+if (isBaby || isTeenager || isChild) {
+    console.log('give him a cup of milk!')
+} else {
+    console.log('give him a bottle of beer!')
+}
+
+const narrator = '';
+const alterEgo1 = 'Tyler Durden';
+const alterEgo2 = 'Marla Singer';
+
+const theMainCharacter = narrator || alterEgo1 || alterEgo2;
+theMainCharacter; // ???
+        "
+    />
+
+    <p>
+        The logical AND (<code>&#38;&#38;</code>) operator (logical conjunction) for a set of <code>boolean</code>
+        operands will be <code>true</code> if and only if all the operands are <code>true</code>.
+        Otherwise it will be <code>false</code>.
+        More generally, the operator returns the value of the first falsy operand encountered when evaluating
+        from left to right, or the value of the last operand if they are all truthy.
+        Consider:
+    </p>
+
+    <code-snippet
+        code="
+//SYNTAX
+val1 && val2 (&& valN);
+// =====
+
+const obj1 = { lang: 'JavaScript' };
+const obj2 = { lang: 'Python' };
+
+const result = obj2 && obj1;
+result; // { lang: 'JavaScript' };
+
+// is the same as follows
+
+const isBaby = true;
+const isTeenager = true;
+const isChild = true;
+
+if (isBaby && isTeenager && isChild) {
+    console.log('give him a cup of milk!')
+} else {
+    console.log('give him a bottle of beer!')
+}
+
+const narrator = '';
+const alterEgo1 = 'Tyler Durden';
+const alterEgo2 = 'Marla Singer';
+
+const theMainCharacter = narrator && alterEgo1 && alterEgo2;
+theMainCharacter; // ???
+    "
     />
 
 </template>

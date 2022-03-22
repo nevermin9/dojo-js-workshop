@@ -182,7 +182,7 @@ while (undef) {
         "
     />
 
-    <p>
+    <!-- <p>
         The conditional (ternary) operator is the only JavaScript operator that takes three operands:
         a condition followed by a question mark (<code>?</code>), then an expression to execute if the condition
         is truthy followed by a colon (<code>:</code>), and finally the expression to execute if the condition is falsy.
@@ -217,9 +217,9 @@ const isTeenager = false;
 // but it is not a good practice
 const drink = isBabe ? 'milk' : isTeenager ? 'tea' : 'beer';
         "
-    />
+    /> -->
 
-    <p>
+    <!-- <p>
         The logical OR <code>||</code> operator (logical disjunction) for a set of operands is <code>true</code>
         if and only if one or more of its operands is <code>true</code>.
         It is typically used with boolean (logical) values.
@@ -302,7 +302,7 @@ const alterEgo2 = 'Marla Singer';
 const theMainCharacter = narrator && alterEgo1 && alterEgo2;
 theMainCharacter; // ???
     "
-    />
+    /> -->
 
     <h3>
         Loose Equals vs. Strict Equals
