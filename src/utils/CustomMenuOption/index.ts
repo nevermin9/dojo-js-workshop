@@ -1,8 +1,9 @@
 import renderMenuNavItem from "@/components/functional/render-menu-nav-item";
 import renderIcon from "@/components/functional/render-icon"
 import { Component, VNode } from "vue";
+import { MenuOption } from "naive-ui"
 
-export default class MenuItem {
+export default class CustomMenuOption {
     public label: () => VNode;
     public icon: () => VNode;
     public key: string;
@@ -13,11 +14,11 @@ export default class MenuItem {
         this.key = routeName;
     }
 
-    static createMenuItems(routesNames: { [key: string ]: string }, icon: Component): MenuItem[] {
-        const menuItemsList = [];
+    static createMenuItems(routesNames: { [key: string ]: string }, icon: Component): MenuOption[] {
+        const menuItemsList: MenuOption[] = [];
 
         for (const name of Object.values(routesNames)) {
-            menuItemsList.push(new MenuItem(name, icon))
+            menuItemsList.push(new CustomMenuOption(name, icon) as MenuOption)
         }
 
         return menuItemsList;

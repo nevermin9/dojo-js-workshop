@@ -12,7 +12,7 @@
                 <n-menu
                     :collapsed-width="64"
                     :collapsed-icon-size="22"
-                    :options="menuItems"
+                    :options="menuOptions"
                 />
             </n-layout-sider>
 
@@ -85,11 +85,11 @@ import {
     darkTheme,
 } from "naive-ui"
 import { BookOutline, ArrowUp } from "@vicons/ionicons5";
-import MenuItem from "@/utils/MenuItem";
+import CustomMenuOption from "@/utils/CustomMenuOption";
 import routesNames from "@/router/routesNames"
 import ResizableBlock from "@/components/ResizableBlock/index.vue"
 
-const menuItems = MenuItem.createMenuItems(routesNames, BookOutline)
+const menuOptions = CustomMenuOption.createMenuItems(routesNames, BookOutline)
 
 export default defineComponent({
     components: {
@@ -118,7 +118,7 @@ export default defineComponent({
 
         return {
             darkTheme,
-            menuItems,
+            menuOptions,
             routesNames,
             layout,
             scrollToTop,
