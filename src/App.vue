@@ -105,12 +105,11 @@ export default defineComponent({
     },
 
     setup() {
-        const layout = ref(null);
+        const layout = ref<typeof NLayout | null>(null);
         const isIncreasedPadding = ref(false);
 
         function scrollToTop() {
-            // @ts-ignore
-            layout.value.$el.scrollIntoView({ behavior: "smooth", block: "start" });
+            layout.value?.$el.scrollIntoView({ behavior: "smooth", block: "start" });
         }
 
         function increasePadding(openEvent: { [key: string]: boolean }) {
