@@ -16,5 +16,8 @@ module.exports = defineConfig({
                 additionalData: "@import \"~@/styles/lib\";",
             },
         },
+    },
+    pwa: {
+        themeColor: "#ffd600",
     }
-})
+});
